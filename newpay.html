@@ -18,23 +18,9 @@
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
     rel="stylesheet"/>
-    <title>APP API</title>
+    <title>Nuevo pago </title>
 </head>
 <body>
-
-    <!-- LOADER -->
-    <div class="loader" id="load">
-        <div class="position-absolute top-50 start-50 translate-middle">
-            <div class="text-center loading">
-                <div class="spinner-grow text-blue"></div>
-                <div class="spinner-grow text-light-blue"></div>
-                <div class="spinner-grow text-light-x-blue"></div>
-            </div>
-        </div>
-    </div>
-    <!-- END: LOADER -->
-
-
 
     <div class="container-sn">
         <div >
@@ -133,59 +119,38 @@
     </div>
 
      <!-- CONTENT PAGE -->
-     <main id="main" class="main">
-        <!-- TITULO DE PAGE -->
-        <div class="card">
-            <div class="card-body pagetitle">
-                <h2>Dashboard</h2>
-                <span class="placeholder col-12 bg-primary"></span>
-            
+
+     <div class="container" style="margin-top: 150px;">
+        <form id="form" method="post" action="">
+          <div>
+            <legend><h2>Añadir nuevo pago</h2></legend>
+
+            <div class="mb-3" style="margin-top: 90px;">
+              <input id="expdatee" type="text" class="form-control" name="expiration_date" placeholder="Fecha de vencimiento" onfocus="(this.type='date')">
+              <div id="msg6" class="alert alert-danger d-none" role="alert">La fecha de vencimiento no puede estar vacio</div>
+            </div>
+
+            <div class="mb-3">
+              <select id="servii" name="service" class="form-select" >
+
+              </select>
+              <div id="msg7" class="alert alert-danger d-none" role="alert">Debe seleccionar un servicio</div>
+            </div>
+
+            <div class="mb-3">
+              <input id="amount" type="text" class="form-control" name="amount" placeholder="Monto">
+              <div id="msg8" class="alert alert-danger d-none" role="alert">El monto no puede estar vacio</div>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-primary" style="margin-top: 3px; width: 150px" >Añadir</button>
             </div>
             
-        </div>
-        
-        <!-- END:  TITULO DE PAGE -->
+          </div>
+        </form>
+      </div>
+  
 
-        <section class="section dashboard">
-            <div class="row">
-                <!-- PAGOS REALIZADOS -->
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header text-blue fw-bold fs-5 alert-primary">Pagos Realizados</div>
-                                <div class="card-body" id="pagosrealizados">
-                                    <!-- ITEMS DE PAGOS REALIZADOS -->
-                                    
-                                    
-                                    <!-- END: ITEMS -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- END:PAGOS REALIZADOS -->
-
-                <!-- PAGOS VENCIDOS -->
-                <div class="col-lg-12">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-header text-blue fw-bold fs-5 alert-primary">Pagos Vencidos</div>
-                                <div class="card-body" id="pagosvencidos">
-                                    <!-- ITEMS DE PAGOS VENCIDOS -->                                    
-                                    
-                                    <!-- END: ITEMS -->
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- END: PAGOS VENCIDOS -->
-            </div>
-        </section>
-    </main>
     <!-- END: CONTENT -->
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
