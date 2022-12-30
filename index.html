@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"/>
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css"
+    rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div class="loader" id="load">
+        <div class="position-absolute top-50 start-50 translate-middle">
+            <div class="text-center loading">
+                <div class="spinner-grow text-blue"></div>
+                <div class="spinner-grow text-light-blue"></div>
+                <div class="spinner-grow text-light-x-blue"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END: LOADER -->
+
+
+
+    <div class="container-sn">
+        <div >
+                <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+        <!-- Toggle button -->
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <i class="fas fa-bars"></i>
+        </button>
+    
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Navbar brand -->
+            <!-- 
+            <a class="navbar-brand mt-2 mt-lg-0" href="#">
+            <img
+                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+                height="15"
+                alt="MDB Logo"
+                loading="lazy"
+            />  
+            </a> -->
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Nuevo Pago</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Servicios</a>
+            </li>
+            </ul>
+            <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+    
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+            <!-- Icon -->
+            <a class="text-reset me-3" href="#">
+            <i class="fas fa-shopping-cart"></i>
+            </a>
+    
+            <!-- Avatar -->
+            <div class="dropdown">
+            <a
+                class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                href="#"
+                id="navbarDropdownMenuAvatar"
+                role="button"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+            >
+                <img
+                src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                class="rounded-circle"
+                height="25"
+                alt="Black and White Portrait of a Man"
+                loading="lazy"
+                />
+            </a>
+            <ul
+                class="dropdown-menu dropdown-menu-end"
+                aria-labelledby="navbarDropdownMenuAvatar"
+            >
+                <li>
+                <a class="dropdown-item" href="#">My profile</a>
+                </li>
+                <li>
+                <a class="dropdown-item" href="#">Settings</a>
+                </li>
+                <li>
+                <a class="dropdown-item" href="#">Logout</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <!-- Right elements -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+  <!-- Navbar -->
+        </div>
+    </div>
+
+     <!-- CONTENT PAGE -->
+     <main id="main" class="main">
+        <!-- TITULO DE PAGE -->
+        <div class="card">
+            <div class="card-body pagetitle">
+                <h2>Dashboard</h2>
+                <span class="placeholder col-12 bg-primary"></span>
+            
+            </div>
+            
+        </div>
+        
+        <!-- END:  TITULO DE PAGE -->
+
+        <section class="section dashboard">
+            <div class="row">
+                <!-- PAGOS REALIZADOS -->
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header text-blue fw-bold fs-5 alert-primary">Pagos Realizados</div>
+                                <div class="card-body" id="pagosrealizados">
+                                    <!-- ITEMS DE PAGOS REALIZADOS -->
+                                    
+                                    
+                                    <!-- END: ITEMS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END:PAGOS REALIZADOS -->
+
+                <!-- PAGOS VENCIDOS -->
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header text-blue fw-bold fs-5 alert-primary">Pagos Vencidos</div>
+                                <div class="card-body" id="pagosvencidos">
+                                    <!-- ITEMS DE PAGOS VENCIDOS -->                                    
+                                    
+                                    <!-- END: ITEMS -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- END: PAGOS VENCIDOS -->
+            </div>
+        </section>
+    </main>
+    <!-- END: CONTENT -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script type="module" src="./static/js/index.js"></script>
+
+</body>
+</html>
